@@ -16,24 +16,23 @@ markdown
 
 Добавьте репозиторий для OpenVPN и ключи для подписи:
 
-bash
-Копировать
+```bash
 echo "deb [signed-by=/etc/apt/keyrings/openvpn-as.gpg.key] http://as-repository.openvpn.net/as/debian $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/openvpn-as.list
 wget --quiet -O - https://as-repository.openvpn.net/as-repo-public.gpg | sudo tee /etc/apt/keyrings/openvpn-as.gpg.key
+
 Установка зависимостей:
 
 Установите необходимые зависимости для OpenVPN:
 
-bash
-Копировать
+```bash
 sudo apt install apt-transport-https ca-certificates -y
 sudo apt update
+
 Установка OpenVPN:
 
 Установите OpenVPN Access Server:
 
-bash
-Копировать
+```bash
 sudo apt install -y openvpn-as
 Доступ к веб-интерфейсу:
 После установки OpenVPN Access Server появятся две ссылки для доступа:
